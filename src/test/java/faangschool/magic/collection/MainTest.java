@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import static java.util.List.of;
-
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class MainTest {
@@ -53,14 +53,13 @@ public class MainTest {
 
     @Test
     public void testAddStudent() {
-
-        Assertions.assertFalse(Main.addStudent(BORIS_STUDENT));
+        assertFalse(Main.addStudent(BORIS_STUDENT));
     }
 
 
     @Test
     public void testDeleteStudent() {
-        Assertions.assertTrue(Main.deleteStudent(BORIS_STUDENT));
+        assertTrue(Main.deleteStudent(BORIS_STUDENT));
     }
 
     public void testGetStudentsGroupingByFacultyAndYear() {
